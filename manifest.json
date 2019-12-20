@@ -1,0 +1,25 @@
+{
+  "name": "Tinder Like Hack",
+  "version": "1.0",
+  "description": "Reveals the faces of the people liked you",
+  "manifest_version": 2,
+  "icons": {
+    "16": "assets/images/icon16.png",
+    "32": "assets/images/icon32.png",
+    "48": "assets/images/icon48.png",
+    "128": "assets/images/icon128.png"
+  },
+  "content_scripts": [{
+  	"matches": ["https://tinder.com/*"],
+  	"all_frames": false,
+  	"js": ["assets/js/contentScript.js"],
+  	"run_at": "document_end"
+  }],
+  "background": {
+  	"scripts": ["assets/js/background.js"],
+  	"persistent": false
+  },
+  "permissions": [
+  	"tabs"
+  ]
+}
